@@ -11,11 +11,11 @@ import javax.inject.Singleton
 class MovieClientImpl implements MovieClient {
     @Inject MovieRegistry registry
 
-    @Override
+    @java.lang.Override
     Movie getMovieDetail(String imdbID) {
-        if(!registry.listFavorites().isEmpty()) {
-            for(Movie movie : registry.listFavorites()) {
-                if(imdbID == movie.getImdbID()) {
+        if(!registry.listFavorites().isEmpty()){
+            for(Movie movie : registry.listFavorites()){
+                if(imdbID == movie.getImdbID()){
                     return movie
                 }
             }
